@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 html,
-body {
+body,
+p {
   margin: 0;
   padding: 0;
 }
@@ -26,5 +27,37 @@ canvas {
   font-style: normal;
 }
 #es-rc #es-rc-content .es-hero {
-  background: center/cover no-repeat url("../img/hero_photo.png");
+  background-color: #FADBE1;
+}
+#es-rc #es-rc-content .es-hero__logoCtn {
+  background-color: #FFF;
+  padding: 0.5rem;
+  border-radius: 99px 0% 0% 99px;
+}
+#es-rc #es-rc-content .es-hero__packCtn {
+  margin-top: -20px;
+}
+#es-rc #es-rc-content .es-hero__text--before-afterCtn {
+  background: left/120% no-repeat url("../img/hero_photo.png");
+  position: relative;
+  height: 266px;
+}
+#es-rc #es-rc-content .es-hero__text--before-after {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  display: flex;
+  left: 16px;
+  top: 16px;
+  gap: 32px;
+}
+#es-rc #es-rc-content .es-hero__text--before {
+  color: #931936;
+}
+#es-rc #es-rc-content .es-hero__text--after {
+  color: #FFF;
+}
+#es-rc #es-rc-content .es-hero__text--info {
+  color: #FFF;
 }/*# sourceMappingURL=style.css.map */
