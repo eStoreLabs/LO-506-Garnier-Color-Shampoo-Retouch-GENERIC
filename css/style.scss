@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    $dark-text: #931936;
+    $mid-bg: #CB2E52;
+    $light: #FADBE1;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+canvas {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+#es-rc #es-rc-content {
+
+    font-family: "Montserrat",
+        sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    & .es-hero {
+        background: center / cover no-repeat url("../img/hero_photo.png");
+    }
+
+}
