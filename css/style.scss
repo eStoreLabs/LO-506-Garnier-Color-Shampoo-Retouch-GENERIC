@@ -5,6 +5,8 @@ $dark-text: #931936;
 $mid-bg: #CB2E52;
 $light: #FADBE1;
 $white: #FFF;
+$fw-regular: 400;
+$fw-bold: 700;
 
 html,
 body,
@@ -35,48 +37,139 @@ canvas {
         sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    font-weight: $fw-regular;
+
+    & .es-sup {
+        font-size: 60%;
+    }
 
     & .es-hero {
         // background: left / 120% no-repeat url("../img/hero_photo.png");
         background-color: $light;
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
         &__logoCtn {
             background-color: $white;
             padding: 0.5rem;
             border-radius: 99px 0% 0% 99px;
-
         }
+
         &__packCtn {
             margin-top: -20px;
         }
+
         &__text {
-            
-            
-            &--before-afterCtn {
-                background: left / 120% no-repeat url("../img/hero_photo.png");
-                position: relative;
-                height: 266px;
+            @media (min-width: 768px) {
+                background: left / cover no-repeat url(../img/hero_photo.png);
+                width: 110%;
             }
+
+            &--before-afterCtn {
+                background: left / 130% no-repeat url("../img/hero_photo.png");
+                position: relative;
+                height: 287px;
+
+                @media(min-width: 768px) {
+                    background: none;
+                }
+            }
+
             &--before-after {
-                
-                font-size: 18px;
-                font-weight: bold;
+                font-size: 1.125rem;
+                font-weight: $fw-bold;
                 text-transform: uppercase;
                 position: absolute;
                 display: flex;
-                left: 16px;
-                top: 16px;
-                gap: 32px;
+                left: 5%;
+                top: 3%;
+                gap: 2.688rem;
 
+                @media (min-width: 425px) {
+                    font-size: 1.2rem;
+                    gap: 3rem;
+                }
+
+                @media (min-width: 768px) {
+                    position: static;
+                    margin-top: 1rem;
+                    margin-left: 1.5rem;
+                    font-size: 18px;
+                }
             }
+
             &--before {
                 color: $dark-text;
             }
+
             &--after {
                 color: $white;
             }
+
             &--info {
                 color: $white;
+                font-weight: $fw-bold;
+                text-transform: uppercase;
+                padding-inline: 1rem;
+                position: absolute;
+                bottom: 0;
 
+                &-top {
+                    font-size: 28px;
+                    @media (min-width: 768px){
+                        margin-left: 25px;
+                    }
+                }
+
+                &-bottom {
+                    font-size: 16px;
+                    @media (min-width: 768px){
+                        margin-left: 25px;
+                    }
+                }
+
+                @media (min-width: 768px) {
+                    padding-left: 5rem;
+                }
+            }
+        }
+
+        &__ribbonCtn {
+            position: relative;
+        }
+
+        &__ribbon__text {
+            color: $dark-text;
+            font-size: 0.688rem;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 64px;
+
+            @media (min-width: 425px) {
+                font-size: 0.8rem;
+            }
+        }
+
+        &__ribbon__sup {
+            color: $dark-text;
+            font-size: 0.688rem;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 55%;
+            left: 35px;
+
+            @media (min-width: 375px) {
+                font-size: 0.8rem;
+                left: 41px;
+            }
+
+            @media (min-width: 425px) {
+                left: 45px;
             }
         }
     }
